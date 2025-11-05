@@ -1,0 +1,76 @@
+/* 1. Use the border-box sizing model globally for easier layout control */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin on the body */
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Ensure full viewport height */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  /* Better font rendering on macOS/iOS */
+}
+
+/* 3. Reset margins and paddings on common structural elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Remove list styles (dots/numbers) on unordered and ordered lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Remove built-in form typography styles and inherit from the parent */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Create a stacking context for the root element (if needed for complex layouts) */
+#root,
+#__next {
+  /* Common IDs for modern frameworks, harmless otherwise */
+  isolation: isolate;
+}
