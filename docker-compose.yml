@@ -1,0 +1,14 @@
+services:
+  static_info_server:
+    container_name: static_info_server_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: qg-portfolio-static-info:latest
+    restart: unless-stopped
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    external: true
