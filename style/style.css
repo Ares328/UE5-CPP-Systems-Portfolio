@@ -164,6 +164,11 @@
   }
 }
 
+/* Logo */
+#jenkins-logo, #aws-logo {
+  background-color: var(--card-light-bg);
+}
+
 /* Header */ 
 .header {
   background-color: var(--bg-color);
