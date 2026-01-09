@@ -28,16 +28,22 @@ document.querySelectorAll('.expand-iframe-toggle').forEach(toggle => {
     event.stopPropagation();
 
     const flipCard = this.closest('.flip__card');
+    
     if (!flipCard.classList.contains('is-flipped')) {
       flipCard.classList.add('is-flipped');
     }
 
     flipCard.classList.toggle('is-expanded-full');
 
-    if (flipCard.classList.contains('is-expanded-full')) {
-      this.textContent = 'Hide Demo';
+    const isExpanded = flipCard.classList.contains('is-expanded-full');
+
+    if (isExpanded) {
+      if (!this.dataset.originalText) {
+        this.dataset.originalText = this.textContent.trim();
+      }
+      this.textContent = 'Hide';
     } else {
-      this.textContent = 'Play Demo Here!';
+      this.textContent = this.dataset.originalText || 'Play Demo Here!';
     }
   });
 });
