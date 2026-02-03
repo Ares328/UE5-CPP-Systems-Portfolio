@@ -52,6 +52,10 @@ document.querySelectorAll('.view-code-link').forEach(link => {
   link.addEventListener('click', stopPropagation);
 });
 
+document.querySelectorAll('.iframe-container').forEach(iframe => {
+  iframe.addEventListener('click', stopPropagation);
+});
+
 const firstCard = document.querySelector('.flip__card');
 
 firstCard.addEventListener('click', function() {

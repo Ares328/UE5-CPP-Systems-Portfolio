@@ -143,7 +143,64 @@
       </div>
 
       <section class="transfer-grid">
+        <article class="flip__card transfer__item">
+          <div class="flip__card-inner">
+            <div class="flip__card-front">
+              <div class="transfer__item__col transfer__item__col--area">The Blind Necromancer</div>
+              <div class="transfer__item__col transfer__item__col--skill">Game development in TDD fashion</div>
+              <div class="transfer__item__col transfer__item__col--app">Game Systems Library in C++</div>
+            </div>
+            <div class="flip__card-back">
+              <h4 class="transfer__item__heading">You wander blindly through a mystery world.</h4>
+              <div class="transfer__item__detail-wrapper">
+                <div class="transfer__item__text">
+                  <p class="transfer__item__detail">
+                    The Blind Necromancer is a C++ game library that I've been working on to practice Test-Driven
+                    Development (TDD) in a game development context. I very much enjoyed working on this project as it
+                    allowed me to focus on building clean, modular C++ systems with a strong emphasis on testing and
+                    code quality.
+                  </p>
+                  <p class="transfer__item__detail">
+                    Removing the need for visuals enabled me to focus on the core game logic and architecture, ensuring
+                    that my C++ code is robust, maintainable, and well-tested. By writing tests first, I can ensure that
+                    my code is designed for testability and that I catch bugs early in the development process. This
+                    project has been a great way for me to hone my C++ skills and practice good software engineering
+                    principles.
+                  </p>
+                  <p class="transfer__item__detail">
+                    Please do give it a try and let me know what you think!
+                  </p>
+                  <div class="transfer__item__actions">
+                    <a href="https://github.com/Ares328/The-Blind-Necromancer" target="_blank"
+                      class="btn btn--small view-code-link">
+                      View Code Sample
+                    </a>
+                    <span class="action-separator">but why leave?</span>
+                    <a href="#" class="btn btn--small expand-iframe-toggle">
+                      Play Demo Here!
+                    </a>
+                    <span class="status-badge">Project active: 2026 – present</span>
+                  </div>
+                </div>
+                <div class="transfer__item__visual-proof">
+                  <div class="iframe-container">
+                    <div class="terminal">
+                      <div class="terminal-output" id="output">
+                        <div>Welcome to The Blind Necromancer!</div>
+                        <div>Type a command (try "move north") and press Enter.</div>
+                      </div>
+                      <div class="terminal-input-line">
+                        <span class="prompt">></span>
+                        <input type="text" id="command-input" autofocus>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+            </div>
+          </div>
+        </article>
         <article class="flip__card transfer__item">
           <div class="flip__card-inner">
             <div class="flip__card-front">
@@ -438,5 +495,6 @@
 </body>
 
 <script src="index.js"></script>
+<script src="cppGame.js"></script>
 
 </html>

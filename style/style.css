@@ -600,6 +600,44 @@
   background-color: #333;
 }
 
+.terminal {
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  border: 1px solid #333;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #00ff41; /* Classic Matrix Green */
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+  border-radius: 5px;
+}
+
+.terminal-output {
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  overflow-y: auto;
+  max-height: 95%;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+}
+
+.prompt {
+  margin-right: 10px;
+}
+
+.terminal input {
+  background: transparent;
+  border: none;
+  color: #00ff41;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .header__greeting {
     margin-bottom: -10px;
