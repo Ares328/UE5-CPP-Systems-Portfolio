@@ -1,6 +1,6 @@
 async function sendTurn(command) {
   console.log('Sending command:', command)
-  const response = await fetch('http://localhost:8080/turn', {
+  const response = await fetch('https://blindnecromancer.qg-portfolio.be/turn', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ command })
