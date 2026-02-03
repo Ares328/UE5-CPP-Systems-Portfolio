@@ -1,6 +1,11 @@
+const isLocal = window.location.hostname === 'blindnecromancer.qg-portfolio.be';
+const BASE_URL = isLocal 
+    ? 'https://blindnecromancer.qg-portfolio.be' 
+    : 'http://localhost:8080';
+
 async function sendTurn(command) {
   console.log('Sending command:', command)
-  const response = await fetch('https://blindnecromancer.qg-portfolio.be/turn', {
+  const response = await fetch(`${BASE_URL}/turn`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ command })
