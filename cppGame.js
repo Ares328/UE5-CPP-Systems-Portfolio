@@ -1,7 +1,7 @@
-const isLocal = window.location.hostname === 'blindnecromancer.qg-portfolio.be';
+const isLocal = window.location.hostname === 'localhost';
 const BASE_URL = isLocal 
-    ? 'https://blindnecromancer.qg-portfolio.be' 
-    : 'http://localhost:8080';
+    ? 'http://localhost:8080' 
+    : 'https://blindnecromancer.qg-portfolio.be';
 
 const input = document.getElementById('command-input');
 const output = document.getElementById('output');
