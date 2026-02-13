@@ -3,6 +3,8 @@ const BASE_URL = isLocal
     ? 'http://localhost:8080' 
     : 'https://blindnecromancer.qg-portfolio.be';
 
+let commandHistoryIndex = -1;
+
 const input = document.getElementById('command-input');
 const output = document.getElementById('output');
 
@@ -62,14 +64,24 @@ async function startGame(name) {
 let isActiveGame = localStorage.getItem('activeGame') !== null;
 
 input.addEventListener('keydown', async (e) => {
+  let history = JSON.parse(localStorage.getItem('commandHistory') || '[]');
   if (e.key === 'Enter') {
     if (isActiveGame) {
       const cmd = input.value;
+      if (!cmd) return;
+      historyIndex = -1;
       input.value = '';
+
+      if (cmd !== history[0]) {
+      history.unshift(cmd); 
+      if (history.length > 50) history.pop();
+      localStorage.setItem('commandHistory', JSON.stringify(history));
+    }
 
       const userLine = document.createElement('div');
       userLine.textContent = `> ${cmd}`;
       output.appendChild(userLine);
+      localStorage.setItem('lastCommand', cmd);
 
       try {
         const data = await sendTurn(cmd);
@@ -104,6 +116,21 @@ input.addEventListener('keydown', async (e) => {
         console.log(error)
         output.innerHTML += `<div style="color: red;">[ERROR]: Game creation failed.</div>`;
       }
+    }
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    if (historyIndex < history.length - 1) {
+      historyIndex++;
+      input.value = history[historyIndex];
+    }
+  } else if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    if (historyIndex > 0) {
+      historyIndex--;
+      input.value = history[historyIndex];
+    } else if (historyIndex === 0) {
+      historyIndex = -1;
+      input.value = '';
     }
   }
 });
