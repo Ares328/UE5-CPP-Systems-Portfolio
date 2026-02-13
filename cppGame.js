@@ -134,8 +134,10 @@ input.addEventListener('keydown', async (e) => {
     }
   }
 });
-
+let buttonClicked = false;
 document.getElementById('game-button-demo').addEventListener('click', async () => {
+  if (buttonClicked) return;
+  buttonClicked = true;
   output.innerHTML = ''; 
   await typeToTerminal("Welcome to The Blind Necromancer...", 50);
 
