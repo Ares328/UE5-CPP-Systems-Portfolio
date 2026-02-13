@@ -619,6 +619,15 @@
   max-height: 95%;
 }
 
+#command-input {
+  caret-color: #00ff41;
+}
+
+.terminal-output div {
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  margin-bottom: 4px;
+}
+
 .terminal-input-line {
   display: flex;
   align-items: center;

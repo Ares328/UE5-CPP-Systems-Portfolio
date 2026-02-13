@@ -155,17 +155,15 @@
               <div class="transfer__item__detail-wrapper">
                 <div class="transfer__item__text">
                   <p class="transfer__item__detail">
-                    The Blind Necromancer is a C++ game library that I've been working on to practice Test-Driven
-                    Development (TDD) in a game development context. I very much enjoyed working on this project as it
-                    allowed me to focus on building clean, modular C++ systems with a strong emphasis on testing and
-                    code quality.
+                    The Blind Necromancer is a C++ library designed to explore the intersection of game development and
+                    rigorous Test-Driven Development (TDD). By stripping away the visual layer, I shifted the entire
+                    focus to core systems and architectural integrity.
                   </p>
                   <p class="transfer__item__detail">
-                    Removing the need for visuals enabled me to focus on the core game logic and architecture, ensuring
-                    that my C++ code is robust, maintainable, and well-tested. By writing tests first, I can ensure that
-                    my code is designed for testability and that I catch bugs early in the development process. This
-                    project has been a great way for me to hone my C++ skills and practice good software engineering
-                    principles.
+                    This constraint allowed me to prioritize clean, modular C++ and ensure that every mechanic is backed
+                    by a robust test suite. The project serves as a sandbox for refining software engineering
+                    principles—catching bugs at the design phase and building a codebase that is as maintainable as it
+                    is performant.
                   </p>
                   <p class="transfer__item__detail">
                     Please do give it a try and let me know what you think!
@@ -176,7 +174,7 @@
                       View Code Sample
                     </a>
                     <span class="action-separator">but why leave?</span>
-                    <a href="#" class="btn btn--small expand-iframe-toggle">
+                    <a href="#" class="btn btn--small expand-iframe-toggle" id="game-button-demo">
                       Play Demo Here!
                     </a>
                     <span class="status-badge">Project active: 2026 – present</span>
@@ -185,10 +183,7 @@
                 <div class="transfer__item__visual-proof">
                   <div class="iframe-container">
                     <div class="terminal">
-                      <div class="terminal-output" id="output">
-                        <div>Welcome to The Blind Necromancer!</div>
-                        <div>Type a command (try "move north") and press Enter.</div>
-                      </div>
+                      <div class="terminal-output" id="output"></div>
                       <div class="terminal-input-line">
                         <span class="prompt">></span>
                         <input type="text" id="command-input" autofocus>
